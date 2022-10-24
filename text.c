@@ -1,9 +1,23 @@
+#include <dirent.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+#include "text.h"
 
-void fix_text (FILE *f) {
-    char x[1024];
+void performChanges(char *fileName) {
 
-    while (fscanf(f, " %1023s", x) == 1) {
-        puts(x);
-    }
+  FILE *fp;
+  int c;
+
+  if (!(fp = fopen(fileName, "rt"))) {
+    perror(fileName);
+    exit(1);
+  }
+  while ((c = fgetc(fp)) != EOF) {
+    
+    printf("%c", c);
+  }
+
+  fclose(fp);
 }
