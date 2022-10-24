@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-int fix_text() {
+void fix_text (FILE *f) {
+    char x[1024];
 
-    extern FILE ptr;
-
-    return 0;
+    while (fscanf(f, " %1023s", x) == 1) {
+        puts(x);
+    }
 }
