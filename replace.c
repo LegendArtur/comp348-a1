@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
   }
 
   else {
-    printf("current working directory is: %s\n", cwd);
+    printf("Current working directory is: %s\n", cwd);
     listFilesRecursively(cwd);
   }
 
