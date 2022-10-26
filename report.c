@@ -3,6 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 
+//one Change contains the file path, number of changes in that file
 typedef struct Changes {
   int number;
   char *fileName;
@@ -26,9 +27,10 @@ void initializeReport(char *fileName, char *targetString) {
           "Updates\t\tFile Name\n",
           targetString, fileName);
 
+  // sort the array
   qsort(changes, sizeof(*changes) / sizeof(changes[0]),
         sizeof(int) + sizeof(char[256]), compare);
-  for (int i = 0; i < currentChangesCount; i++) {
+  for (int i = currentChangesCount-1; i >= 0; i--) {
     fprintf(reportFile, "%d\t\t\t%s\n", changes[i].number, changes[i].fileName);
   }
 
@@ -38,12 +40,11 @@ void initializeReport(char *fileName, char *targetString) {
 }
 
 void addChange(char *fileName, int numberOfChanges) {
-  //changes = realloc(changes, currentChangesCount + 1 * sizeof(*changes));
   Change *temp = realloc(changes, (currentChangesCount + 1) * sizeof(*changes));
   if (temp != NULL)
     changes = temp;
   else
-    return;
+    exit(1);
 
   Change *c = malloc(sizeof(Change));
 

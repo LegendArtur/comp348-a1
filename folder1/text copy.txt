@@ -1,3 +1,3 @@
-ee A bAcktrAce involving mAlloc, REAlloc or free, it meAns your heAp is corrupted: your progrAm overwrote some dAtA structures used by the memory mAnAgement system. The most common cAuses for thAt Are writing pAst the bounds of A block AllocAted by mAlloc (buffer overflow) And continuing to use A memory block AllocAted by mAlloc After cAlling free on it (use After free).
+ee A BACKTRACE invoLving mALloc, REALloc or FREE, it meAnS yoUr HEAP iS corrUpted: yoUr progrAm overwrote Some dAtA StrUctUreS USed by the memory mAnAgement SyStem. The moSt common cAUSeS for thAt Are writing pASt the boUndS of A bLock ALlocAted by mALloc (bUffer overfLow) And continUing to USe A memory bLock ALlocAted by mALloc After cALling FREE on it (USe After FREE).
 
-As WeAther VAne AlREAdy mentioned in A comment, the SIze you pAss to mAlloc And REAlloc for s doesn't mAtch your usAge of s. s i
+AS WeAther VAne ALREAdy mentioned in A comment, the SIze yoU pASs to mALloc And REALloc for S doeSn't mAtch yoUr USAge of S. S i

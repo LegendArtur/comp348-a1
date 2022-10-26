@@ -1,2 +1,2 @@
-ee A bAcktrAce involving mAlloc, REAlloc or free, it
-As WeAther VAne AlREAdy mentioned in A comment, the SIze you pAss to mAlloc And REAlloc for s doesn't mAtch your usAge of s. s i
+ee A BACKTRACE invoLving mALloc, REALloc or FREE, it
+AS WeAther VAne ALREAdy mentioned in A comment, the SIze yoU pASs to mALloc And REALloc for S doeSn't mAtch yoUr USAge of S. S i

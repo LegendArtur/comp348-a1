@@ -56,4 +56,7 @@ void performChanges(char *fileName) {
   rename("temp.txt", fileName);
   addChange(fileName, numberOfChanges);
 
+  fclose(file);
+  fclose(tempFile);
+
 }
