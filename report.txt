@@ -1,8 +1,8 @@
-Target string: l
+Target string: size
 Search begins in current folder: /workspace/comp348-a1
 
 ------Report------
 Updates		File Name
-31			/workspace/comp348-a1/folder1/text.txt
-25			/workspace/comp348-a1/folder1/text copy.txt
-11			/workspace/comp348-a1/folder1/folder11/text2.txt
+0			/workspace/comp348-a1/folder1/text.txt
+0			/workspace/comp348-a1/folder1/text copy.txt
+0			/workspace/comp348-a1/folder1/folder11/text2.txt

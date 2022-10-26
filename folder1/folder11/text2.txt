@@ -1,1 +1,10 @@
-ee A BACKTRACE invoLving mALloc, REALloc or FREE, it meAnS yoUr HEAP iS corrUpted: yoUr progrAm overwrote Some dAtA StrUctUreS USed by the memory mAnAgement SyStem. The moSt common cAUSeS for thAt Are writing pASt the boUndS of A bLock ALlocAted by mALloc (bUffer overfLow) And continUing to USe A memory bLock ALlocAted by mALloc After cALling FREE on it (USe After FREE).
+ach: 
+There are many ways by which the array can be sorted in ascending order, like:  
+
+Selection Sort
+Bubble Sort
+Merge Sort
+Radix Sort
+Insertion Sort, etc
+For simplicity, we will be using Selection Sort in this article.
+The array can be sorted in ascending

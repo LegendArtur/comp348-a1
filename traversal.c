@@ -26,6 +26,7 @@ void listFilesRecursively(char *basePath) {
   if (!dir) {
     return;
   }
+  
   while ((dp = readdir(dir)) != NULL) {
     if (strcmp(dp->d_name, ".") != 0 && strcmp(dp->d_name, "..") != 0) {
 

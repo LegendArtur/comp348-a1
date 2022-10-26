@@ -8,8 +8,9 @@
 #include <string.h>
 #include <sys/types.h>
 
-int numberOfChanges;
+int numberOfChanges = 0;
 
+//finds and capitalizes targeter word
 static void addLine(char *line, FILE *tempFile) {
 
   // check each char
@@ -27,23 +28,26 @@ static void addLine(char *line, FILE *tempFile) {
 
         // if it is Capitalize the word and put cursor to following char
         if (myarg[y + 1] == '\0') {
+          numberOfChanges++;
+
           for (int k = 0; k <= y; k++) {
-            numberOfChanges++;
             fputc(toupper(line[i + k]), tempFile);
           }
+
           i += y + 1;
         }
       }
     }
 
     // put each character
-    fputc(line[i], tempFile);
+    if (i != strlen(line)) {
+      fputc(line[i], tempFile);
+    }
   }
-
 }
 
+//performs changes 
 void performChanges(char *fileName) {
-  
   FILE *file = fopen(fileName, "rt");
   FILE *tempFile = fopen("temp.txt", "w");
 
@@ -55,8 +59,5 @@ void performChanges(char *fileName) {
 
   rename("temp.txt", fileName);
   addChange(fileName, numberOfChanges);
-
-  fclose(file);
-  fclose(tempFile);
-
+  numberOfChanges = 0;
 }

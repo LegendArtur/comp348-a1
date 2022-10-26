@@ -1,2 +1,8 @@
-ee A BACKTRACE invoLving mALloc, REALloc or FREE, it
-AS WeAther VAne ALREAdy mentioned in A comment, the SIze yoU pASs to mALloc And REALloc for S doeSn't mAtch yoUr USAge of S. S i
+For simplicity, we will be using Selection Sort in this article.
+The array can be sorted in ascending order by repeatedly finding the minimum ELEMENT (considering ascending order) from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array. 
+
+The subarray which is already sorted.
+Remaining subarray which is unsorted.
+In every iteration of selection sort, the minimum ELEMENT (considering ascending order) from the unsorted subarray is picked and moved to the sorted subarray.
+Below is the implementation of the above approach: 
+
