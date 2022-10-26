@@ -38,7 +38,13 @@ void initializeReport(char *fileName, char *targetString) {
 }
 
 void addChange(char *fileName, int numberOfChanges) {
-  changes = realloc(changes, currentChangesCount + 1 * sizeof(*changes));
+  //changes = realloc(changes, currentChangesCount + 1 * sizeof(*changes));
+  Change *temp = realloc(changes, (currentChangesCount + 1) * sizeof(*changes));
+  if (temp != NULL)
+    changes = temp;
+  else
+    return;
+
   Change *c = malloc(sizeof(Change));
 
   c->number = numberOfChanges;

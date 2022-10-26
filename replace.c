@@ -33,5 +33,6 @@ int main(int argc, char *argv[]) {
   }
 
   initializeReport(cwd, myarg);
+
   return 0;
 }

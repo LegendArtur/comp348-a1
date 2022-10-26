@@ -1,0 +1,1 @@
+ee A bAcktrAce involving mAlloc, REAlloc or free, it meAns your heAp is corrupted: your progrAm overwrote some dAtA structures used by the memory mAnAgement system. The most common cAuses for thAt Are writing pAst the bounds of A block AllocAted by mAlloc (buffer overflow) And continuing to use A memory block AllocAted by mAlloc After cAlling free on it (use After free).
