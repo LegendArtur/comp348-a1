@@ -1,5 +1,5 @@
-#include "text.h"
 #include "report.h"
+#include "text.h"
 #include <dirent.h>
 #include <stdio.h>
 #include <string.h>
@@ -10,13 +10,13 @@ void listFilesRecursively(char *path);
 int ends_with_txt(const char *str) {
   char *dot = strrchr(str, '.');
 
-  if (NULL == dot)
+  if (NULL == dot) {
     return 0;
+  }
   return strcmp(dot, ".txt") == 0;
 }
 
-
-//Opens files and sub-directories recursively considering path as base path.
+// Opens files and sub-directories recursively considering path as base path.
 void listFilesRecursively(char *basePath) {
   char path[1000];
   struct dirent *dp;

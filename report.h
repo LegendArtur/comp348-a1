@@ -3,6 +3,6 @@
 
 void initializeReport(char *fileName, char *targetString);
 
-void addChange(char *fileName, int *numberOfChanges);
+void addChange(char *fileName, int numberOfChanges);
 
 #endif //REPORT_H
