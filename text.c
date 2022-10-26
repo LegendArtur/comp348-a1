@@ -1,5 +1,6 @@
 #include "text.h"
 #include "replace.h"
+#include "report.h"
 #include <ctype.h>
 #include <dirent.h>
 #include <stdio.h>
@@ -7,6 +8,7 @@
 #include <string.h>
 #include <sys/types.h>
 
+int *numberOfChanges = 0;
 static void addLine(char *line, FILE *tempFile) {
 
   // check each char
@@ -22,21 +24,21 @@ static void addLine(char *line, FILE *tempFile) {
           break;
         }
 
-        // if it is
+        // if it is Capitalize the word and put cursor to following char
         if (myarg[y + 1] == '\0') {
+          numberOfChanges++;
           for (int k = 0; k <= y; k++) {
-            printf("%c", toupper(line[i+k]));
-            fputc(toupper(line[i+k]), tempFile);
+            fputc(toupper(line[i + k]), tempFile);
           }
           i += y + 1;
         }
       }
     }
 
-    printf("%c", line[i]);
+    // put each character
     fputc(line[i], tempFile);
-
   }
+
 }
 
 void performChanges(char *fileName) {
@@ -49,8 +51,8 @@ void performChanges(char *fileName) {
     addLine(buffer, tempFile);
   }
 
+  //addChange(fileName, numberOfChanges);
   rename("temp.txt", fileName);
-
 
   fclose(file);
 }
